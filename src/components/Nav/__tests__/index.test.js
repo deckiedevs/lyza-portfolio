@@ -23,7 +23,12 @@ describe('Nav component', () => {
 
     // snapshot test
     it('matches snapshot', () => {
-        const { asFragment } = render(<Nav />);
+        const { asFragment } = 
+        render (<Nav 
+            categories={categories}
+            mockSetCurrentCategory={mockSetCurrentCategory}
+            currentCategory={mockCurrentCategory}
+        />);
 
         expect(asFragment()).toMatchSnapshot();
     });
